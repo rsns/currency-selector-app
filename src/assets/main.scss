@@ -1,0 +1,82 @@
+@import "./base.scss";
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+  color: #1d2233;
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
+
+/* Shared component-specific styles */
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.item {
+  border: 1px solid #ccc;
+  width: 90px;
+  height: 36px;
+  padding: 5px;
+}
+
+.remove {
+  width: 10px;
+  height: 10px;
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+
+  border-radius: 50%;
+  border: 2px solid #fff;
+
+  background-color: #000;
+
+  cursor: pointer;
+
+  &:hover {
+    color: #000;
+    border: 2px solid #000;
+    background-color: #fff;
+  }
+
+  &::after {
+    content: "X";
+  }
+}
+
+.currency-selector-box,
+.selected-currencies {
+  @extend .box;
+}
+
+.selected-currencies-item,
+.currency-selector-item {
+  @extend .item;
+}
+
+.remove-currency {
+  @extend .remove;
+}
