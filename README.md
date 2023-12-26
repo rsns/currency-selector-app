@@ -70,3 +70,4 @@ npm run test:e2e -- --debug
 npm run lint
 ```
 # currency-selector-app
+# currency-selector-app
